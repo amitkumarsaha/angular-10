@@ -1,0 +1,57 @@
+<div>
+    <div class="register-container">
+    <mat-card class="mat-elevation-z10">
+        <mat-card-header>
+            <mat-card-title>Sign Up</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+                <form [formGroup]="registrationForm" (ngSubmit)="register()">
+                    <!-- <mat-form-field appearance="fill">
+                        <mat-label>Choose your User Id</mat-label>
+                        <input matInput required formControlName="userId">
+                        <mat-error *ngIf="isValidInput('userId')">{{getErrorMessage('userId', 'User Id')}}</mat-error>
+                    </mat-form-field> -->
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your First Name</mat-label>
+                        <input matInput required formControlName="firstName">
+                        <mat-error *ngIf="isValidInput('firstName')">{{getErrorMessage('firstName', 'First Name')}}</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your Middle Name</mat-label>
+                        <input matInput formControlName="middleName">
+                        <mat-error *ngIf="isValidInput('middleName')">{{getErrorMessage('middleName', 'Middle Name')}}</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your Last Name</mat-label>
+                        <input matInput required formControlName="lastName">
+                        <mat-error *ngIf="isValidInput('lastName')">{{getErrorMessage('lastName', 'Last Name')}}</mat-error>
+                    </mat-form-field>
+        
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="email@example.com" required formControlName="emailId">
+                        <!-- <input matInput placeholder="email@example.com" [formControl]="emailId" required [(ngModel)]="emailId" name="emailId">
+                        <mat-error *ngIf="emailId.invalid">{{getErrorMessage()}}</mat-error> -->
+                        <mat-error *ngIf="isValidInput('emailId')">{{getErrorMessage('emailId', 'Email')}}</mat-error>
+                    </mat-form-field>
+        
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" required formControlName="secret">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="isValidInput('secret')">{{getErrorMessage('secret', 'Password')}}</mat-error>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="accent" [routerLink] = "['/login']">Sign In</button>
+                <button mat-raised-button (click)="register()" color="primary" [disabled]="!registrationForm.valid">Register</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div>
+    <mat-icon>{{getIcon}}</mat-icon>{{data.messageType | titlecase}}
+</div>
+<div class="content-style">{{data.displayMessage}}</div>
+<div style="text-align: center;">
+    <button mat-flat-button (click)="snackBarRef.dismiss()">{{data.buttonText}}</button>
+</div>

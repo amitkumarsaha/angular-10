@@ -1,0 +1,26 @@
+.login-container {
+    margin-left: 8px;
+    vertical-align: center;
+  }
+  
+  .login-right-align {
+    text-align: right;
+  }
+  
+  input.login-right-align::-webkit-outer-spin-button,
+  input.login-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.login-right-align {
+    -moz-appearance: textfield;
+  }
+
+  .mat-form-field {
+    display: block;
+  }
+  .mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }

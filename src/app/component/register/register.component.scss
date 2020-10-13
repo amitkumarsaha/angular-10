@@ -1,0 +1,25 @@
+.register-container {
+    margin-left: 8px;
+  }
+  
+  .register-right-align {
+    text-align: right;
+  }
+  
+  input.register-right-align::-webkit-outer-spin-button,
+  input.register-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.register-right-align {
+    -moz-appearance: textfield;
+  }
+
+  .mat-form-field {
+    display: block;
+  }
+  .mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }

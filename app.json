@@ -1,0 +1,8 @@
+{
+    "name": "Buddy Referral Job Board",
+    "description": "Buddy Referral Job Board using Angular 10",
+    "repository": "https://github.com/beanstacksystems/job-board",
+    "logo": "https://budref.herokuapp.com/budref.png",
+    "keywords": ["angular","node", "express", "static"]
+  }
+  
